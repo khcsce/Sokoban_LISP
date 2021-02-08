@@ -429,7 +429,10 @@
 
 ; EXERCISE: Modify this function to compute the 
 ; number of misplaced boxes in s.
-;
+;; This function is admissible since it measures how close the current state
+;; is to the solution. If there exists n boxxes in the state S, at least n moves
+;; will be needed to move all the n boxes into a goal state. The cost of reaching
+;; goal state is not overestimated
 (defun h1 (s)
 ;; The functions that you are allowed to use are the same as those allowed in hw1 and hw2 plus: butlast,
 ;;  nthcdr, count
